@@ -1,0 +1,216 @@
+/*
+Color Palette
+A modern, vibrant but clean palette could be:
+
+Deep Navy #1B2A4A — primary background/navbar
+Coral/Orange #FF6B6B — accent color (replaces your current red)
+Teal #4ECDC4 — secondary accent
+Soft White #F7F9FC — page background
+Light Gray #E8EDF3 — section alternating backgrounds
+
+*/
+
+/* CSS Variables */
+:root {
+  --navy:      #1B2A4A; /* Deep Navy */
+  --coral:     #FF6B6B; /* Coral/Orange */
+  --teal:      #4ECDC4; /* Teal */
+  --white:     #F7F9FC; /* Soft White */
+  --lightgray: #E8EDF3; /* Light Grey */
+  --lightteal: rgba(78, 205, 196, 0.25); /* Light Teal */
+}
+
+/* Font: Story Script */
+body {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  background-color: var(--lightgray);
+  color: var(--navy); 
+}
+
+h1,h2,h3,h4,h5,h6 {
+	text-align: center;
+}
+.material-icons-round {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  margin: auto;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Navigation Bar */
+.navbar {
+	padding: 0;
+	margin: 0;
+	background-color: var(--navy); 
+	color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.navbar h1 {
+	color: rgba(255, 255, 255, 0.92);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 0 8px rgba(255, 255, 255, 0.4);
+  letter-spacing: 2px;
+}
+
+/* Creates space above about section */
+.whitespace {
+	background-color: var(--white);
+	padding: 48px;
+}
+
+/* About */
+.about {
+	background-color: var(--white);
+	padding: 24px;
+}
+
+/* Border for Mission Statement */
+.stickynote {
+	text-align: center;
+	border: 12px groove var(--coral); 
+	border-radius: 12px;
+	padding: 5px;
+}
+
+/* Grid Container */
+.card-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 10px;
+	padding: 16px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* Left Vertical Rectangle - spans both rows */
+.div1 {
+	grid-column: 1;
+	grid-row: 1 / 3;
+	padding: 10px;
+	border: 3px solid var(--navy);
+	border-radius: 5px;
+	background-color: var(--coral);
+	color: var(--white);
+}
+.div1 li {
+	margin-bottom: 20px;
+}
+
+/* Right Top Square */
+.div2 {
+	grid-column: 2;
+	grid-row: 1;
+	border: 3px solid var(--navy);
+	border-radius: 5px;
+	background-color: var(--coral);
+	color: var(--white);
+	text-align: center;
+}
+
+/* Right Bottom Square */
+.div3 {
+	grid-column: 2;
+	grid-row: 2;
+	padding: 10px;
+	border: 3px solid var(--navy);
+	border-radius: 5px;
+	background-color: var(--lightteal);
+	color: var(--navy);
+	text-align: center;
+}
+
+/* Bottom Horizontal Rectangle - spans both columns */
+.div4 {
+	grid-column: 1 / 3;
+	grid-row: 3;
+	padding: 10px;
+	border: 3px solid var(--navy);
+	border-radius: 5px;
+	background-color: var(--lightteal);
+	color: var(--navy);
+	text-align: center;
+}
+
+/* Services */
+.services {
+	background-color: var(--white);
+	padding: 24px;
+}
+
+/* Centers Table */
+table {
+	margin: 0 auto;
+}
+th {
+	background-color: var(--teal);
+	color: var(--white);
+	padding: 10px;
+}
+td {
+	border-right: 1px solid var(--teal);
+	padding: 10px;
+}
+.rightborder {
+	border: none;
+}
+
+/* unvisited link */
+a:link {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* selected link */
+a:active {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+/* Contact/Footer */
+.contact {
+	background-color: var(--navy);	
+	color: var(--white);
+	padding: 24px;
+	text-align: center;
+}
